@@ -1,0 +1,334 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+@font-face {
+  font-family: "ocrd";
+  src: url("../fonts/ocrb.ttf");
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 32px;
+}
+
+/* background gradient */
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* end background gradient */
+
+/* animated text */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+  /*
+    --color-primary: #5192ED;
+    --color-secondary: #69A1F0;
+    --color-tertiary: #7EAEF2;
+    --color-quaternary: #90BAF5;
+    --color-quinary: #A2C4F5;
+    */
+}
+
+body {
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.content {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+  font-size: 3em;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/* end animated text */
+
+.info-text {
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  font-family: "ocrd";
+}
+
+.info-text a,
+info-text a:visited {
+  color: #272e33;
+  font-weight: 700;
+}
+
+.info-text a:hover {
+  color: #495156;
+}
+
+.wizard-emoji-hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🧙🏻‍♂️</text></svg>")
+      16 0,
+    auto;
+}
+
+.code-box {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #1f3b4d;
+  padding: 12px;
+  width: 100%;
+
+  -webkit-box-shadow: 10px 10px 41px 1px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 10px 10px 41px 1px rgba(0, 0, 0, 0.81);
+  box-shadow: 10px 10px 41px 1px rgba(0, 0, 0, 0.81);
+}
+
+.curl-snippet {
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+}
+
+.code-comment {
+  color: #676f73;
+}
+
+.clipboard-container {
+  padding: 8px;
+  background-color: #414b50;
+  border-radius: 4px;
+  border: solid 1px #676f73;
+  cursor: pointer;
+}
+
+pre,
+code {
+  white-space: normal;
+}
+
+.clipboard-container {
+  display: none;
+}
+
+.code-box:hover .clipboard-container {
+  display: block;
+}
+
+.clipboard-container:hover {
+  background-color: #545d62;
+}
+
+.icon {
+  display: block;
+  width: 14px;
+  height: auto;
+}
+
+.clipboard-icon {
+  display: block;
+}
+
+.check-icon,
+.alert-icon {
+  display: none;
+}
+
+.curl-command {
+  color: #e67e80;
+}
+
+.accessibility-switch-conatiner {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "ocrd";
+}
+
+.accessibility-switch {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.accessibility-switch form {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltip-icon {
+  cursor: pointer;
+  display: block;
+  padding-left: 16px;
+}
+
+.tooltip-title {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tooltip-text {
+  display: block;
+  opacity: 0%;
+  background-color: #ffffff;
+  color: #222;
+  font-size: 14px;
+  width: 512px;
+  padding: 16px;
+  border-radius: 4px;
+  transition: opacity .5s ease;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  pointer-events: none;
+}
+
+.tooltip-text a, .tooltip-text:visited {
+  color: #222;
+} 
+
+.tooltip-icon:hover + .tooltip-text, .tooltip-text:hover {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+.custom-toggle {
+}
+
+.accessible-switch-input {
+  display: none;
+}
+
+.toggle-button {
+  width: 56px;
+  height: 32px;
+  border-radius: 32px;
+  border: none;
+  padding: 0 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  background-color: #495156;
+}
+
+.toggle-slider {
+  display: block;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #83c092;
+}
+
