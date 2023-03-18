@@ -1,5 +1,20 @@
+// accessibility toggle
+let accToggled = false;
+const toggleButton = document.querySelector(".toggle-button");
+const toggleSlider = document.querySelector(".toggle-slider");
+toggleButton.addEventListener("click", (e) => {
+  e.preventDefault()
+  if(accToggled) {
+    toggleButton.className = "toggle-button toggle-button-deactivated"
+    toggleSlider.className = "toggle-slider toggle-slider-deactivated";
+  } else {
+    toggleButton.className = "toggle-button toggle-button-activated"
+    toggleSlider.className = "toggle-slider toggle-slider-activated";
+  }
+  accToggled = !accToggled;
+});
+
 // tooltip stuff
-const suh = "suh"
 const u = "marcusprice88";
 const at = "&#64;";
 const d = "gmail";

@@ -304,9 +304,6 @@ code {
   pointer-events: all;
 }
 
-.custom-toggle {
-}
-
 .accessible-switch-input {
   display: none;
 }
@@ -317,18 +314,34 @@ code {
   border-radius: 32px;
   border: none;
   padding: 0 4px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   cursor: pointer;
+  position: relative;
   background-color: #495156;
 }
 
+.toggle-button-deactivated {
+  background-color: #9da9a0;
+}
+
+.toggle-button-activated {
+  background-color: #384b55;
+}
+
 .toggle-slider {
+  position: absolute;
   display: block;
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background-color: #83c092;
+  background-color: #fff;
+  top: 4px;
+  transition: all .15s ease;
 }
 
+.toggle-slider-deactivated {
+  transform: translate(0);
+}
+
+.toggle-slider-activated {
+  transform: translate(100%);
+}
