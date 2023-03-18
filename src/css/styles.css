@@ -217,11 +217,12 @@ code {
 }
 
 .clipboard-container {
-  display: none;
+  opacity: 0;
+  transition: opacity .25s ease;
 }
 
 .code-box:hover .clipboard-container {
-  display: block;
+  opacity: 1;
 }
 
 .clipboard-container:hover {
@@ -316,11 +317,11 @@ code {
   padding: 0 4px;
   cursor: pointer;
   position: relative;
-  background-color: #495156;
+  background-color: #fff;
 }
 
 .toggle-button-deactivated {
-  background-color: #9da9a0;
+  background-color: #fff;
 }
 
 .toggle-button-activated {
@@ -333,9 +334,9 @@ code {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #83c092;
   top: 4px;
-  transition: all .15s ease;
+  transition: all .25s ease;
 }
 
 .toggle-slider-deactivated {

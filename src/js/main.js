@@ -31,16 +31,19 @@ const checkIcon = document.querySelector(".check-icon");
 const alertIcon = document.querySelector(".alert-icon");
 
 function showCheckIcon() {
-  clipboardContainer.style = "display: block";
+  clipboardContainer.style = "opacity: 1";
   clipboardIcon.style = "display: none";
   checkIcon.style = "display: block";
 }
 
 function showClipboardIcon() {
-  clipboardContainer.style = "";
-  checkIcon.style = "display: none";
-  alertIcon.style = "display: none";
-  clipboardIcon.style = "display: block";
+  clipboardContainer.style = "opacity: 0";
+  setTimeout(() => {
+    checkIcon.style = "display: none";
+    alertIcon.style = "display: none";
+    clipboardIcon.style = "display: block";
+    clipboardContainer.style = "";
+  }, 250)
 }
 
 function showAlertIcon() {
